@@ -328,6 +328,11 @@ header {
   width: calc(50% - 15px);
 }
 
+.price-item {
+  display: flex;
+  justify-content: space-between;
+}
+
 .price-item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -453,7 +458,14 @@ header {
   background-color: var(--light-bgc);
 }
 
+.barbers .container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .barbers-pre-title {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -464,6 +476,8 @@ header {
 }
 
 .barbers-title {
+  margin-bottom: 44px;
+
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 42px;
@@ -473,7 +487,22 @@ header {
   color: var(--title-color);
 }
 
+.barbers-list {
+  display: flex;
+  gap: 30px;
+}
+
+.barbers-item {
+  width: calc((100% - 60px) / 3);
+}
+
+.barbers-card-content {
+  margin-top: 30px;
+}
+
 .barbers-name {
+  margin-bottom: 8px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 1.39;
@@ -508,7 +537,14 @@ header {
   margin: -1px;
 }
 
+.gallery .container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .gallery-text {
+  margin-bottom: 44px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -516,6 +552,15 @@ header {
   text-transform: uppercase;
 
   color: var(--title-color);
+}
+
+.gallery-list {
+  display: flex;
+  gap: 30px;
+}
+
+.gallery-item {
+  width: calc((100% - 90px) / 4);
 }
 
 /* --------------------FORM-------------------- */
@@ -604,6 +649,7 @@ header {
 }
 
 .contacts-text {
+  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
@@ -625,6 +671,20 @@ header {
   letter-spacing: 0.2em;
 
   color: var(--second-text-color);
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer-list {
+  display: flex;
+  gap: 40px;
 }
 
 .footer-link {
