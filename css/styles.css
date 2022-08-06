@@ -11,6 +11,7 @@ body {
   --transparent-grey: rgba(157, 164, 189, 0.6);
   --light-bgc: #f7f7f7;
   --dark-bgc: #191c26;
+  --icon-bgc: #ffffff;
 }
 
 p,
@@ -73,7 +74,12 @@ header {
 }
 
 .header-logo {
+  display: flex;
   padding: 20px 0;
+}
+
+.header-logo-icon {
+  fill: var(--title-color);
 }
 
 .header-list {
@@ -158,6 +164,12 @@ header {
 }
 
 .hero-content {
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url(../images/hero-bg1.jpg);
+
   padding: 272px 100px 208px 100px;
   flex-grow: 1;
 
@@ -177,6 +189,17 @@ header {
   text-transform: uppercase;
 
   color: var(--transparent-grey);
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-pre-title::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--transparent-grey);
 }
 
 .hero-title {
@@ -230,6 +253,17 @@ header {
   text-transform: uppercase;
 
   color: var(--title-color);
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-pre-title::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--title-color);
 }
 
 .about-title {
@@ -284,7 +318,12 @@ header {
 /* --------------------PRICE-------------------- */
 
 .price {
-  background-color: #555555;
+  background-color: #111319;
+  background-image: url(../images/price-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
 }
 
 .price .container {
@@ -301,6 +340,17 @@ header {
   text-transform: uppercase;
 
   color: var(--transparent-grey);
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.price-pre-title::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--transparent-grey);
 }
 
 .price-title {
@@ -319,18 +369,35 @@ header {
 .price-content {
   display: flex;
   gap: 30px;
-  /* justify-content: space-between; */
 }
 
 .price-list {
-  outline: 1px solid white;
   padding: 30px 20px;
   width: calc(50% - 15px);
+}
+
+.price-list:first-child {
+  background-image: linear-gradient(rgba(23, 26, 36, 1), rgba(23, 26, 36, 0.2));
+}
+
+.price-list:last-child {
+  background-image: linear-gradient(rgba(9, 11, 19, 1), rgba(9, 11, 19, 0.2));
 }
 
 .price-item {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+}
+
+.price-item::after {
+  content: '';
+  width: 100px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  flex-grow: 1;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .price-item:not(:last-child) {
@@ -353,7 +420,10 @@ header {
   letter-spacing: 0.02em;
 
   color: var(--second-text-color);
+
+  order: 1;
 }
+
 .price-btn {
   margin: 44px auto 0 auto;
 
@@ -374,24 +444,38 @@ header {
 
 .benefits .container {
   padding: 120px 15px;
+
   display: flex;
 }
 
 .benefits-list {
-  padding-right: 100px;
-  padding-left: 100px;
-
   display: flex;
   flex-wrap: wrap;
-  /* gap: 30px; */
+  width: 370px;
+  margin-right: 130px;
+  padding-left: 100px;
 }
 
 .benefits-item {
+  box-sizing: border-box;
   width: 170px;
   height: 133px;
   padding: 20px 24px;
 
   background-color: var(--light-bgc);
+}
+
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
+}
+
+.benefits-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.benefits-item-top {
+  display: flex;
+  justify-content: center;
 }
 
 .benefits-item span {
@@ -402,6 +486,8 @@ header {
   letter-spacing: 0.05em;
 
   color: var(--title-color);
+
+  display: inline-block;
 }
 
 .benefits-item sup {
@@ -411,6 +497,13 @@ header {
   text-align: center;
 
   color: var(--accent-color);
+
+  margin-top: 7px;
+}
+
+.benefits-content {
+  box-sizing: content-box;
+  max-width: 500px;
 }
 
 .benefits-descr {
@@ -429,6 +522,17 @@ header {
   text-transform: uppercase;
 
   color: var(--title-color);
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.benefits-pre-title::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--title-color);
 }
 
 .benefits-title {
@@ -473,6 +577,17 @@ header {
   text-transform: uppercase;
 
   color: var(--title-color);
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.barbers-pre-title::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--title-color);
 }
 
 .barbers-title {
@@ -513,6 +628,7 @@ header {
 }
 
 .barbers-descr {
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.36;
@@ -520,6 +636,31 @@ header {
   letter-spacing: 0.02em;
 
   color: var(--accent-color);
+}
+
+.barbers-soc-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.barbers-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--icon-bgc);
+}
+
+.barbers-soc-icon {
+  fill: var(--title-color);
+}
+
+.barbers-soc-link:hover .barbers-soc-icon,
+.barbers-soc-link:focus .barbers-soc-icon {
+  fill: var(--accent-color);
 }
 
 /* --------------------GALLERY-------------------- */
@@ -552,6 +693,17 @@ header {
   text-transform: uppercase;
 
   color: var(--title-color);
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gallery-text::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--title-color);
 }
 
 .gallery-list {
@@ -563,10 +715,22 @@ header {
   width: calc((100% - 90px) / 4);
 }
 
+/* --------------------CONTACT-WRAP-------------------- */
+
+.contact-wrap {
+  background-color: #111319;
+}
+
+.contact-wrap .container {
+  display: flex;
+}
+
 /* --------------------FORM-------------------- */
 
 .form {
-  background-color: var(--dark-bgc);
+  padding-top: 130px;
+  padding-bottom: 194px;
+  width: calc(50% - 15px);
 }
 
 .form-title {
@@ -582,7 +746,9 @@ header {
 /* --------------------CONTACTS-------------------- */
 
 .contacts {
-  background-color: var(--dark-bgc);
+  padding-top: 130px;
+  padding-bottom: 120px;
+  width: calc(50% - 15px);
 }
 
 .contacts-title {
@@ -639,6 +805,8 @@ header {
 }
 
 .contacts b {
+  font-family: 'Open Sans' sans-serif;
+  font-style: normal;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
