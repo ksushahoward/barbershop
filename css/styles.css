@@ -12,6 +12,7 @@ body {
   --light-bgc: #f7f7f7;
   --dark-bgc: #191c26;
   --icon-bgc: #ffffff;
+  --line-in-contacts: rgba(157, 164, 189, 0.4);
 }
 
 p,
@@ -48,10 +49,9 @@ button {
 }
 
 .container {
-  padding: 0 15px;
   width: 1170px;
   margin: 0 auto;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .link {
@@ -65,12 +65,17 @@ button {
 /* --------------------HEADER-------------------- */
 
 header {
-  background-color: #555555;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .header-container {
   display: flex;
   align-items: center;
+
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .header-logo {
@@ -145,6 +150,9 @@ header {
 
 .hero-container {
   display: flex;
+
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .hero-link {
@@ -324,6 +332,8 @@ header {
   background-position: center;
   background-size: cover;
   max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .price .container {
@@ -563,8 +573,7 @@ header {
 }
 
 .barbers .container {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 15px;
 }
 
 .barbers-pre-title {
@@ -679,8 +688,7 @@ header {
 }
 
 .gallery .container {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 15px;
 }
 
 .gallery-text {
@@ -718,7 +726,13 @@ header {
 /* --------------------CONTACT-WRAP-------------------- */
 
 .contact-wrap {
-  background-color: #111319;
+  background-color: var(--dark-bgc);
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: calc(50% - 15px) 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .contact-wrap .container {
@@ -731,6 +745,7 @@ header {
   padding-top: 130px;
   padding-bottom: 194px;
   width: calc(50% - 15px);
+  margin-right: 30px;
 }
 
 .form-title {
@@ -748,7 +763,17 @@ header {
 .contacts {
   padding-top: 130px;
   padding-bottom: 120px;
-  width: calc(50% - 15px);
+  padding-left: 100px;
+  width: calc(50%-15px);
+}
+
+.contacts-list {
+  width: 270px;
+  min-height: 160px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .contacts-title {
@@ -757,6 +782,8 @@ header {
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
+
+  margin-bottom: 40px;
 
   color: var(--main-title-color);
 }
@@ -804,7 +831,12 @@ header {
   color: var(--accent-color);
 }
 
-.contacts b {
+.b-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 70px;
+
   font-family: 'Open Sans' sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -814,6 +846,14 @@ header {
   text-transform: uppercase;
 
   color: var(--main-title-color);
+}
+
+.b-text::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--line-in-contacts);
+  margin-right: 20px;
 }
 
 .contacts-text {
@@ -845,6 +885,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding-left: 15px;
+  padding-right: 15px;
 
   padding-top: 56px;
   padding-bottom: 56px;
