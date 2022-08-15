@@ -110,6 +110,10 @@ header {
   letter-spacing: 0.1em;
 
   color: var(--main-title-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -144,6 +148,15 @@ header {
   text-transform: uppercase;
 
   color: var(--main-title-color);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-btn:hover,
+.header-btn:focus {
+  background-color: var(--accent-color);
 }
 
 /* --------------------HERO-------------------- */
@@ -155,6 +168,31 @@ header {
   padding-right: 15px;
 }
 
+.hero-soc {
+  width: 100px;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding-left: 27px;
+  padding-bottom: 40px;
+}
+
+.hero-list {
+  display: flex;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--title-color);
+}
+
 .hero-link {
   font-family: 'Open Sans';
   font-style: normal;
@@ -164,6 +202,10 @@ header {
   letter-spacing: 0.2em;
 
   color: var(--title-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-link:hover,
@@ -182,11 +224,6 @@ header {
   flex-grow: 1;
 
   background-color: #555555;
-}
-
-.hero-list {
-  width: 100px;
-  background-color: #ffffff;
 }
 
 .hero-pre-title {
@@ -321,6 +358,16 @@ header {
   color: var(--title-color);
 
   cursor: pointer;
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-btn:hover,
+.about-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--main-title-color);
 }
 
 /* --------------------PRICE-------------------- */
@@ -448,6 +495,15 @@ header {
   color: var(--main-title-color);
 
   cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.price-btn:hover,
+.price-btn:focus {
+  background-color: var(--accent-color);
 }
 
 /* --------------------BENEFITS-------------------- */
@@ -665,6 +721,10 @@ header {
 
 .barbers-soc-icon {
   fill: var(--title-color);
+
+  transition: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .barbers-soc-link:hover .barbers-soc-icon,
@@ -788,8 +848,14 @@ header {
   color: var(--main-title-color);
 }
 
+.adress-icon,
+.phone-icon,
+.mail-icon {
+  margin-right: 20px;
+}
+
 .adress-link {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans' sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -797,10 +863,14 @@ header {
   letter-spacing: 0.02em;
 
   color: var(--second-text-color);
+
+  transition: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tel-link {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans' sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -808,10 +878,14 @@ header {
   letter-spacing: 0.02em;
 
   color: var(--second-text-color);
+
+  transition: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .email-link {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans' sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -820,6 +894,10 @@ header {
   text-decoration-line: underline;
 
   color: var(--second-text-color);
+
+  transition: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-link:hover,
@@ -895,7 +973,15 @@ header {
 
 .footer-list {
   display: flex;
+  align-items: center;
   gap: 40px;
+}
+
+.footer-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--title-color);
 }
 
 .footer-link {
@@ -905,6 +991,10 @@ header {
   letter-spacing: 0.2em;
 
   color: var(--title-color);
+
+  transition: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link:hover,
