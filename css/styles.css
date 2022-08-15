@@ -852,6 +852,7 @@ header {
 .phone-icon,
 .mail-icon {
   margin-right: 20px;
+  fill: currentColor;
 }
 
 .adress-link {
